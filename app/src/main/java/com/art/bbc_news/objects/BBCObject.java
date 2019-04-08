@@ -2,11 +2,12 @@ package com.art.bbc_news.objects;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class BBCObject {
+public class BBCObject implements Serializable {
 
     @SerializedName("status")
     private String status;

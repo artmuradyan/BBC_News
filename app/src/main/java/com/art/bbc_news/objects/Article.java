@@ -2,10 +2,11 @@ package com.art.bbc_news.objects;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Article {
+public class Article implements Serializable {
 
     @SerializedName("source")
     private Source source;

@@ -1,4 +1,4 @@
-package com.art.bbc_news.bbcnews_page;
+package com.art.bbc_news.bbcnews_screen;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
