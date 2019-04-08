@@ -6,10 +6,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.art.bbc_news.R;
 import com.art.bbc_news.objects.Article;
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -76,6 +79,7 @@ public class BBCNewsAdapter extends RecyclerView.Adapter<BBCNewsAdapter.BBCNewsV
         Context context;
         TextView mTitleTxt;
         TextView mDescriptionTxt;
+        ImageView mNewsImage;
 
         public BBCNewsViewHolder(@NonNull View itemView, final Context context) {
             super(itemView);
@@ -83,6 +87,7 @@ public class BBCNewsAdapter extends RecyclerView.Adapter<BBCNewsAdapter.BBCNewsV
 
             mTitleTxt = itemView.findViewById(R.id.news_title);
             mDescriptionTxt = itemView.findViewById(R.id.news_description);
+            mNewsImage = itemView.findViewById(R.id.news_image);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -96,11 +101,8 @@ public class BBCNewsAdapter extends RecyclerView.Adapter<BBCNewsAdapter.BBCNewsV
         void bind(final Article articleItem, int position) {
             mTitleTxt.setText(articleItem.getTitle());
             mDescriptionTxt.setText(articleItem.getDescription());
-        }
-
+            Glide.with(context).load(articleItem.getUrlToImage()).into(mNewsImage);        }
     }
-
-
 }
 
 
