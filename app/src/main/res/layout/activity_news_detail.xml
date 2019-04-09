@@ -2,17 +2,14 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/bbcnews_root_ly"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bbcnews_screen.BBCNewsActivity">
+    tools:context=".newsdetail_screan.NewsDetailActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/bbc_news_reciclerview"
+    <WebView
+        android:id="@+id/news_detail_webview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
